@@ -12,7 +12,7 @@ import Haneke
 class PerfTableViewController: UITableViewController {
     var perfomances = [Perfomance]()
     var placeholders = [UIImage]()
-    let blackView = UIControl(frame: UIScreen.mainScreen().bounds)
+    var blackView: UIControl!
     let underTextViewShadow = TextViewShadow()
     let textView = UITextView()
     
@@ -140,11 +140,13 @@ class PerfTableViewController: UITableViewController {
         }
         
         tableView.reloadRowsAtIndexPaths(indexPathesToBeReloaded, withRowAnimation: .Automatic)
+        tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .None, animated: true)
     }
     
     func showDescription(index: Int) {
         tableView.scrollEnabled = false
 
+        blackView = UIControl(frame: view.bounds)
         blackView.backgroundColor = .blackColor()
         blackView.alpha = 0.0
         blackView.addTarget(self, action: #selector(hideDescription), forControlEvents: .TouchUpInside)
@@ -153,9 +155,10 @@ class PerfTableViewController: UITableViewController {
         view.addSubview(underTextViewShadow)
         view.addSubview(textView)
         
+        
         textView.snp_makeConstraints { (make) in
-            make.center.equalTo(view)
-            make.width.height.equalTo(view.snp_width).inset(10)
+            make.center.equalTo(blackView)
+            make.width.height.equalTo(blackView.snp_width).inset(10)
         }
         underTextViewShadow.snp_makeConstraints { $0.edges.equalTo(textView) }
         

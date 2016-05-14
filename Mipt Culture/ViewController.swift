@@ -74,7 +74,6 @@ class ViewController: UIViewController {
         }) { (completed: Bool) in
             self.addChildViewController(self.vc)
             self.view.addSubview(self.vc.view)
-            //Fetcher.updateSavedData()
         }
     }
     
