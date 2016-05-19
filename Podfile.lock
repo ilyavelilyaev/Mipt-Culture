@@ -1,0 +1,27 @@
+PODS:
+  - Bolts/Tasks (1.7.0)
+  - CalendarView (1.1.2):
+    - SwiftMoment (~> 0.1)
+  - HanekeSwift (0.10.1)
+  - Parse (1.13.0):
+    - Bolts/Tasks (~> 1.6)
+  - SnapKit (0.21.0)
+  - SwiftMoment (0.4)
+
+DEPENDENCIES:
+  - CalendarView
+  - HanekeSwift
+  - Parse
+  - SnapKit
+
+SPEC CHECKSUMS:
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  CalendarView: 35d51b70586213604edec22a585d105273f6e191
+  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
+  SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
+  SwiftMoment: e751c44be03a183fa6c949426d9473d26a66ef29
+
+PODFILE CHECKSUM: 05bc3bcd25bbc570863de0ecac9f66ae1ce69362
+
+COCOAPODS: 1.0.0

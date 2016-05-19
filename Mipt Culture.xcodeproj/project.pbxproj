@@ -1,0 +1,874 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5DF6050A93CC866098315412 /* Pods_Mipt_CultureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E788DD8B6F8214EA5E209212 /* Pods_Mipt_CultureTests.framework */; };
+		772270820EB901A7832EB867 /* Pods_Mipt_Culture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB9F413F56CBC25DA9E73C9 /* Pods_Mipt_Culture.framework */; };
+		8C85B39F3D409665C2CA9E37 /* Pods_Mipt_CultureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F706E7DCA6EF1039C0BC2C /* Pods_Mipt_CultureUITests.framework */; };
+		D35175EC1CEDEC210096E47A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35175EB1CEDEC210096E47A /* AppDelegate.swift */; };
+		D35175EE1CEDEC210096E47A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35175ED1CEDEC210096E47A /* ViewController.swift */; };
+		D35175F31CEDEC210096E47A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35175F21CEDEC210096E47A /* Assets.xcassets */; };
+		D35175F61CEDEC210096E47A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35175F41CEDEC210096E47A /* LaunchScreen.storyboard */; };
+		D35176011CEDEC220096E47A /* Mipt_CultureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35176001CEDEC220096E47A /* Mipt_CultureTests.swift */; };
+		D351760C1CEDEC220096E47A /* Mipt_CultureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351760B1CEDEC220096E47A /* Mipt_CultureUITests.swift */; };
+		D3A897F91CEE1433001951D8 /* Perfomance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A897F81CEE1433001951D8 /* Perfomance.swift */; };
+		D3A897FB1CEE1A39001951D8 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A897FA1CEE1A39001951D8 /* Fetcher.swift */; };
+		D3C0EC131CEE2E4F005A616D /* PerfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0EC121CEE2E4F005A616D /* PerfTableViewCell.swift */; };
+		D3C0EC151CEE2F48005A616D /* PerfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0EC141CEE2F48005A616D /* PerfTableViewController.swift */; };
+		D3C0EC371CEE333E005A616D /* Ropa Sans Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC171CEE333E005A616D /* Ropa Sans Black Italic.otf */; };
+		D3C0EC381CEE333E005A616D /* Ropa Sans Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC181CEE333E005A616D /* Ropa Sans Black.otf */; };
+		D3C0EC391CEE333E005A616D /* Ropa Sans Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC191CEE333E005A616D /* Ropa Sans Bold Italic.otf */; };
+		D3C0EC3A1CEE333E005A616D /* Ropa Sans Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC1A1CEE333E005A616D /* Ropa Sans Bold.otf */; };
+		D3C0EC3B1CEE333E005A616D /* Ropa Sans ExtraBold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC1B1CEE333E005A616D /* Ropa Sans ExtraBold Italic.otf */; };
+		D3C0EC3C1CEE333E005A616D /* Ropa Sans ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC1C1CEE333E005A616D /* Ropa Sans ExtraBold.otf */; };
+		D3C0EC3D1CEE333E005A616D /* Ropa Sans ExtraLight Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC1D1CEE333E005A616D /* Ropa Sans ExtraLight Italic.otf */; };
+		D3C0EC3E1CEE333E005A616D /* Ropa Sans ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC1E1CEE333E005A616D /* Ropa Sans ExtraLight.otf */; };
+		D3C0EC3F1CEE333E005A616D /* Ropa Sans Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC1F1CEE333E005A616D /* Ropa Sans Italic.otf */; };
+		D3C0EC401CEE333E005A616D /* Ropa Sans Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC201CEE333E005A616D /* Ropa Sans Light Italic.otf */; };
+		D3C0EC411CEE333E005A616D /* Ropa Sans Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC211CEE333E005A616D /* Ropa Sans Light.otf */; };
+		D3C0EC421CEE333E005A616D /* Ropa Sans Medium Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC221CEE333E005A616D /* Ropa Sans Medium Italic.otf */; };
+		D3C0EC431CEE333E005A616D /* Ropa Sans Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC231CEE333E005A616D /* Ropa Sans Medium.otf */; };
+		D3C0EC441CEE333E005A616D /* Ropa Sans SC Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC241CEE333E005A616D /* Ropa Sans SC Black Italic.otf */; };
+		D3C0EC451CEE333E005A616D /* Ropa Sans SC Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC251CEE333E005A616D /* Ropa Sans SC Black.otf */; };
+		D3C0EC461CEE333E005A616D /* Ropa Sans SC Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC261CEE333E005A616D /* Ropa Sans SC Bold Italic.otf */; };
+		D3C0EC471CEE333E005A616D /* Ropa Sans SC Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC271CEE333E005A616D /* Ropa Sans SC Bold.otf */; };
+		D3C0EC481CEE333E005A616D /* Ropa Sans SC ExtraBold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC281CEE333E005A616D /* Ropa Sans SC ExtraBold Italic.otf */; };
+		D3C0EC491CEE333E005A616D /* Ropa Sans SC ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC291CEE333E005A616D /* Ropa Sans SC ExtraBold.otf */; };
+		D3C0EC4A1CEE333E005A616D /* Ropa Sans SC ExtraLight Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC2A1CEE333E005A616D /* Ropa Sans SC ExtraLight Italic.otf */; };
+		D3C0EC4B1CEE333E005A616D /* Ropa Sans SC ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC2B1CEE333E005A616D /* Ropa Sans SC ExtraLight.otf */; };
+		D3C0EC4C1CEE333E005A616D /* Ropa Sans SC Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC2C1CEE333E005A616D /* Ropa Sans SC Italic.otf */; };
+		D3C0EC4D1CEE333E005A616D /* Ropa Sans SC Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC2D1CEE333E005A616D /* Ropa Sans SC Light Italic.otf */; };
+		D3C0EC4E1CEE333E005A616D /* Ropa Sans SC Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC2E1CEE333E005A616D /* Ropa Sans SC Light.otf */; };
+		D3C0EC4F1CEE333E005A616D /* Ropa Sans SC Medium Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC2F1CEE333E005A616D /* Ropa Sans SC Medium Italic.otf */; };
+		D3C0EC501CEE333E005A616D /* Ropa Sans SC Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC301CEE333E005A616D /* Ropa Sans SC Medium.otf */; };
+		D3C0EC511CEE333E005A616D /* Ropa Sans SC Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC311CEE333E005A616D /* Ropa Sans SC Thin Italic.otf */; };
+		D3C0EC521CEE333E005A616D /* Ropa Sans SC Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC321CEE333E005A616D /* Ropa Sans SC Thin.otf */; };
+		D3C0EC531CEE333E005A616D /* Ropa Sans SC.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC331CEE333E005A616D /* Ropa Sans SC.otf */; };
+		D3C0EC541CEE333E005A616D /* Ropa Sans Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC341CEE333E005A616D /* Ropa Sans Thin Italic.otf */; };
+		D3C0EC551CEE333E005A616D /* Ropa Sans Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC351CEE333E005A616D /* Ropa Sans Thin.otf */; };
+		D3C0EC561CEE333E005A616D /* Ropa Sans.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC361CEE333E005A616D /* Ropa Sans.otf */; };
+		D3D7602B1CEE567700308A74 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3D760241CEE567700308A74 /* 1.jpg */; };
+		D3D7602C1CEE567700308A74 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3D760251CEE567700308A74 /* 2.jpg */; };
+		D3D7602D1CEE567700308A74 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3D760261CEE567700308A74 /* 3.jpg */; };
+		D3D7602E1CEE567700308A74 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3D760271CEE567700308A74 /* 4.jpg */; };
+		D3D7602F1CEE567700308A74 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3D760281CEE567700308A74 /* 5.jpg */; };
+		D3D760301CEE567700308A74 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3D760291CEE567700308A74 /* 6.jpg */; };
+		D3D760311CEE567700308A74 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3D7602A1CEE567700308A74 /* 7.jpg */; };
+		D3D760331CEE5C1A00308A74 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D760321CEE5C1A00308A74 /* DetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D35175FD1CEDEC220096E47A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D35175E01CEDEC210096E47A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D35175E71CEDEC210096E47A;
+			remoteInfo = "Mipt Culture";
+		};
+		D35176081CEDEC220096E47A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D35175E01CEDEC210096E47A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D35175E71CEDEC210096E47A;
+			remoteInfo = "Mipt Culture";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14312C47B80B016DC194996A /* Pods-Mipt CultureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mipt CultureUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mipt CultureUITests/Pods-Mipt CultureUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1C7F4B8CFD4A960B7416CA99 /* Pods-Mipt Culture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mipt Culture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mipt Culture/Pods-Mipt Culture.debug.xcconfig"; sourceTree = "<group>"; };
+		1CB9F413F56CBC25DA9E73C9 /* Pods_Mipt_Culture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mipt_Culture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD76937408434236E2820BD /* Pods-Mipt CultureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mipt CultureTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mipt CultureTests/Pods-Mipt CultureTests.debug.xcconfig"; sourceTree = "<group>"; };
+		64AB1B21EEF82FA924A06B02 /* Pods-Mipt CultureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mipt CultureUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mipt CultureUITests/Pods-Mipt CultureUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C015E85FC9DEB37DEF3EBD1 /* Pods-Mipt CultureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mipt CultureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mipt CultureTests/Pods-Mipt CultureTests.release.xcconfig"; sourceTree = "<group>"; };
+		AFE7C90BF10F0480745EB461 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5CC2BE38517826E0EDC9A1 /* Pods-Mipt Culture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mipt Culture.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mipt Culture/Pods-Mipt Culture.release.xcconfig"; sourceTree = "<group>"; };
+		C8F706E7DCA6EF1039C0BC2C /* Pods_Mipt_CultureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mipt_CultureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35175E81CEDEC210096E47A /* Mipt Culture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mipt Culture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35175EB1CEDEC210096E47A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D35175ED1CEDEC210096E47A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D35175F21CEDEC210096E47A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D35175F51CEDEC210096E47A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D35175F71CEDEC210096E47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35175FC1CEDEC220096E47A /* Mipt CultureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mipt CultureTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35176001CEDEC220096E47A /* Mipt_CultureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mipt_CultureTests.swift; sourceTree = "<group>"; };
+		D35176021CEDEC220096E47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35176071CEDEC220096E47A /* Mipt CultureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mipt CultureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D351760B1CEDEC220096E47A /* Mipt_CultureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mipt_CultureUITests.swift; sourceTree = "<group>"; };
+		D351760D1CEDEC220096E47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A897F81CEE1433001951D8 /* Perfomance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Perfomance.swift; sourceTree = "<group>"; };
+		D3A897FA1CEE1A39001951D8 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
+		D3C0EC121CEE2E4F005A616D /* PerfTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfTableViewCell.swift; sourceTree = "<group>"; };
+		D3C0EC141CEE2F48005A616D /* PerfTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfTableViewController.swift; sourceTree = "<group>"; };
+		D3C0EC171CEE333E005A616D /* Ropa Sans Black Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Black Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC181CEE333E005A616D /* Ropa Sans Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Black.otf"; sourceTree = "<group>"; };
+		D3C0EC191CEE333E005A616D /* Ropa Sans Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Bold Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC1A1CEE333E005A616D /* Ropa Sans Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Bold.otf"; sourceTree = "<group>"; };
+		D3C0EC1B1CEE333E005A616D /* Ropa Sans ExtraBold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans ExtraBold Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC1C1CEE333E005A616D /* Ropa Sans ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans ExtraBold.otf"; sourceTree = "<group>"; };
+		D3C0EC1D1CEE333E005A616D /* Ropa Sans ExtraLight Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans ExtraLight Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC1E1CEE333E005A616D /* Ropa Sans ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans ExtraLight.otf"; sourceTree = "<group>"; };
+		D3C0EC1F1CEE333E005A616D /* Ropa Sans Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC201CEE333E005A616D /* Ropa Sans Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Light Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC211CEE333E005A616D /* Ropa Sans Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Light.otf"; sourceTree = "<group>"; };
+		D3C0EC221CEE333E005A616D /* Ropa Sans Medium Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Medium Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC231CEE333E005A616D /* Ropa Sans Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Medium.otf"; sourceTree = "<group>"; };
+		D3C0EC241CEE333E005A616D /* Ropa Sans SC Black Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC Black Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC251CEE333E005A616D /* Ropa Sans SC Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC Black.otf"; sourceTree = "<group>"; };
+		D3C0EC261CEE333E005A616D /* Ropa Sans SC Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC Bold Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC271CEE333E005A616D /* Ropa Sans SC Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC Bold.otf"; sourceTree = "<group>"; };
+		D3C0EC281CEE333E005A616D /* Ropa Sans SC ExtraBold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC ExtraBold Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC291CEE333E005A616D /* Ropa Sans SC ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC ExtraBold.otf"; sourceTree = "<group>"; };
+		D3C0EC2A1CEE333E005A616D /* Ropa Sans SC ExtraLight Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC ExtraLight Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC2B1CEE333E005A616D /* Ropa Sans SC ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC ExtraLight.otf"; sourceTree = "<group>"; };
+		D3C0EC2C1CEE333E005A616D /* Ropa Sans SC Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC2D1CEE333E005A616D /* Ropa Sans SC Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC Light Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC2E1CEE333E005A616D /* Ropa Sans SC Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC Light.otf"; sourceTree = "<group>"; };
+		D3C0EC2F1CEE333E005A616D /* Ropa Sans SC Medium Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC Medium Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC301CEE333E005A616D /* Ropa Sans SC Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC Medium.otf"; sourceTree = "<group>"; };
+		D3C0EC311CEE333E005A616D /* Ropa Sans SC Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC Thin Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC321CEE333E005A616D /* Ropa Sans SC Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC Thin.otf"; sourceTree = "<group>"; };
+		D3C0EC331CEE333E005A616D /* Ropa Sans SC.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans SC.otf"; sourceTree = "<group>"; };
+		D3C0EC341CEE333E005A616D /* Ropa Sans Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Thin Italic.otf"; sourceTree = "<group>"; };
+		D3C0EC351CEE333E005A616D /* Ropa Sans Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Thin.otf"; sourceTree = "<group>"; };
+		D3C0EC361CEE333E005A616D /* Ropa Sans.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans.otf"; sourceTree = "<group>"; };
+		D3D760241CEE567700308A74 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		D3D760251CEE567700308A74 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		D3D760261CEE567700308A74 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		D3D760271CEE567700308A74 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		D3D760281CEE567700308A74 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		D3D760291CEE567700308A74 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		D3D7602A1CEE567700308A74 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		D3D760321CEE5C1A00308A74 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E788DD8B6F8214EA5E209212 /* Pods_Mipt_CultureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mipt_CultureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D35175E51CEDEC210096E47A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772270820EB901A7832EB867 /* Pods_Mipt_Culture.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D35175F91CEDEC220096E47A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF6050A93CC866098315412 /* Pods_Mipt_CultureTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D35176041CEDEC220096E47A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C85B39F3D409665C2CA9E37 /* Pods_Mipt_CultureUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30965EE93E536206D6BCF1F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C7F4B8CFD4A960B7416CA99 /* Pods-Mipt Culture.debug.xcconfig */,
+				BA5CC2BE38517826E0EDC9A1 /* Pods-Mipt Culture.release.xcconfig */,
+				3BD76937408434236E2820BD /* Pods-Mipt CultureTests.debug.xcconfig */,
+				7C015E85FC9DEB37DEF3EBD1 /* Pods-Mipt CultureTests.release.xcconfig */,
+				64AB1B21EEF82FA924A06B02 /* Pods-Mipt CultureUITests.debug.xcconfig */,
+				14312C47B80B016DC194996A /* Pods-Mipt CultureUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D35175DF1CEDEC210096E47A = {
+			isa = PBXGroup;
+			children = (
+				D35175EA1CEDEC210096E47A /* Mipt Culture */,
+				D35175FF1CEDEC220096E47A /* Mipt CultureTests */,
+				D351760A1CEDEC220096E47A /* Mipt CultureUITests */,
+				D35175E91CEDEC210096E47A /* Products */,
+				D3D760231CEE567700308A74 /* Placeholders */,
+				D3C0EC161CEE333E005A616D /* Ropa_Sans */,
+				DA4F6CBBB4534D5AA7E62865 /* Frameworks */,
+				30965EE93E536206D6BCF1F2 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		D35175E91CEDEC210096E47A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D35175E81CEDEC210096E47A /* Mipt Culture.app */,
+				D35175FC1CEDEC220096E47A /* Mipt CultureTests.xctest */,
+				D35176071CEDEC220096E47A /* Mipt CultureUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D35175EA1CEDEC210096E47A /* Mipt Culture */ = {
+			isa = PBXGroup;
+			children = (
+				D35175EB1CEDEC210096E47A /* AppDelegate.swift */,
+				D3A897F81CEE1433001951D8 /* Perfomance.swift */,
+				D3A897FA1CEE1A39001951D8 /* Fetcher.swift */,
+				D35175ED1CEDEC210096E47A /* ViewController.swift */,
+				D3C0EC141CEE2F48005A616D /* PerfTableViewController.swift */,
+				D3D760321CEE5C1A00308A74 /* DetailViewController.swift */,
+				D3C0EC121CEE2E4F005A616D /* PerfTableViewCell.swift */,
+				D35175F21CEDEC210096E47A /* Assets.xcassets */,
+				D35175F41CEDEC210096E47A /* LaunchScreen.storyboard */,
+				D35175F71CEDEC210096E47A /* Info.plist */,
+			);
+			path = "Mipt Culture";
+			sourceTree = "<group>";
+		};
+		D35175FF1CEDEC220096E47A /* Mipt CultureTests */ = {
+			isa = PBXGroup;
+			children = (
+				D35176001CEDEC220096E47A /* Mipt_CultureTests.swift */,
+				D35176021CEDEC220096E47A /* Info.plist */,
+			);
+			path = "Mipt CultureTests";
+			sourceTree = "<group>";
+		};
+		D351760A1CEDEC220096E47A /* Mipt CultureUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D351760B1CEDEC220096E47A /* Mipt_CultureUITests.swift */,
+				D351760D1CEDEC220096E47A /* Info.plist */,
+			);
+			path = "Mipt CultureUITests";
+			sourceTree = "<group>";
+		};
+		D3C0EC161CEE333E005A616D /* Ropa_Sans */ = {
+			isa = PBXGroup;
+			children = (
+				D3C0EC171CEE333E005A616D /* Ropa Sans Black Italic.otf */,
+				D3C0EC181CEE333E005A616D /* Ropa Sans Black.otf */,
+				D3C0EC191CEE333E005A616D /* Ropa Sans Bold Italic.otf */,
+				D3C0EC1A1CEE333E005A616D /* Ropa Sans Bold.otf */,
+				D3C0EC1B1CEE333E005A616D /* Ropa Sans ExtraBold Italic.otf */,
+				D3C0EC1C1CEE333E005A616D /* Ropa Sans ExtraBold.otf */,
+				D3C0EC1D1CEE333E005A616D /* Ropa Sans ExtraLight Italic.otf */,
+				D3C0EC1E1CEE333E005A616D /* Ropa Sans ExtraLight.otf */,
+				D3C0EC1F1CEE333E005A616D /* Ropa Sans Italic.otf */,
+				D3C0EC201CEE333E005A616D /* Ropa Sans Light Italic.otf */,
+				D3C0EC211CEE333E005A616D /* Ropa Sans Light.otf */,
+				D3C0EC221CEE333E005A616D /* Ropa Sans Medium Italic.otf */,
+				D3C0EC231CEE333E005A616D /* Ropa Sans Medium.otf */,
+				D3C0EC241CEE333E005A616D /* Ropa Sans SC Black Italic.otf */,
+				D3C0EC251CEE333E005A616D /* Ropa Sans SC Black.otf */,
+				D3C0EC261CEE333E005A616D /* Ropa Sans SC Bold Italic.otf */,
+				D3C0EC271CEE333E005A616D /* Ropa Sans SC Bold.otf */,
+				D3C0EC281CEE333E005A616D /* Ropa Sans SC ExtraBold Italic.otf */,
+				D3C0EC291CEE333E005A616D /* Ropa Sans SC ExtraBold.otf */,
+				D3C0EC2A1CEE333E005A616D /* Ropa Sans SC ExtraLight Italic.otf */,
+				D3C0EC2B1CEE333E005A616D /* Ropa Sans SC ExtraLight.otf */,
+				D3C0EC2C1CEE333E005A616D /* Ropa Sans SC Italic.otf */,
+				D3C0EC2D1CEE333E005A616D /* Ropa Sans SC Light Italic.otf */,
+				D3C0EC2E1CEE333E005A616D /* Ropa Sans SC Light.otf */,
+				D3C0EC2F1CEE333E005A616D /* Ropa Sans SC Medium Italic.otf */,
+				D3C0EC301CEE333E005A616D /* Ropa Sans SC Medium.otf */,
+				D3C0EC311CEE333E005A616D /* Ropa Sans SC Thin Italic.otf */,
+				D3C0EC321CEE333E005A616D /* Ropa Sans SC Thin.otf */,
+				D3C0EC331CEE333E005A616D /* Ropa Sans SC.otf */,
+				D3C0EC341CEE333E005A616D /* Ropa Sans Thin Italic.otf */,
+				D3C0EC351CEE333E005A616D /* Ropa Sans Thin.otf */,
+				D3C0EC361CEE333E005A616D /* Ropa Sans.otf */,
+			);
+			name = Ropa_Sans;
+			path = "Mipt Culture/Ropa_Sans";
+			sourceTree = "<group>";
+		};
+		D3D760231CEE567700308A74 /* Placeholders */ = {
+			isa = PBXGroup;
+			children = (
+				D3D760241CEE567700308A74 /* 1.jpg */,
+				D3D760251CEE567700308A74 /* 2.jpg */,
+				D3D760261CEE567700308A74 /* 3.jpg */,
+				D3D760271CEE567700308A74 /* 4.jpg */,
+				D3D760281CEE567700308A74 /* 5.jpg */,
+				D3D760291CEE567700308A74 /* 6.jpg */,
+				D3D7602A1CEE567700308A74 /* 7.jpg */,
+			);
+			name = Placeholders;
+			path = "Mipt Culture/Placeholders";
+			sourceTree = "<group>";
+		};
+		DA4F6CBBB4534D5AA7E62865 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7C90BF10F0480745EB461 /* Pods.framework */,
+				1CB9F413F56CBC25DA9E73C9 /* Pods_Mipt_Culture.framework */,
+				E788DD8B6F8214EA5E209212 /* Pods_Mipt_CultureTests.framework */,
+				C8F706E7DCA6EF1039C0BC2C /* Pods_Mipt_CultureUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D35175E71CEDEC210096E47A /* Mipt Culture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D35176101CEDEC220096E47A /* Build configuration list for PBXNativeTarget "Mipt Culture" */;
+			buildPhases = (
+				F9FED3CD25BB021989C0A177 /* 📦 Check Pods Manifest.lock */,
+				D35175E41CEDEC210096E47A /* Sources */,
+				D35175E51CEDEC210096E47A /* Frameworks */,
+				D35175E61CEDEC210096E47A /* Resources */,
+				E33DD2447F88A105944425D6 /* 📦 Embed Pods Frameworks */,
+				8BA05E7D8374FA1EEA4EB4C3 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mipt Culture";
+			productName = "Mipt Culture";
+			productReference = D35175E81CEDEC210096E47A /* Mipt Culture.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D35175FB1CEDEC220096E47A /* Mipt CultureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D35176131CEDEC220096E47A /* Build configuration list for PBXNativeTarget "Mipt CultureTests" */;
+			buildPhases = (
+				2F8067DF12EADDF21E915FB7 /* 📦 Check Pods Manifest.lock */,
+				D35175F81CEDEC220096E47A /* Sources */,
+				D35175F91CEDEC220096E47A /* Frameworks */,
+				D35175FA1CEDEC220096E47A /* Resources */,
+				86F454163B23DD0482F534F6 /* 📦 Embed Pods Frameworks */,
+				E3BAB0927A2B133F43C6ADFC /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D35175FE1CEDEC220096E47A /* PBXTargetDependency */,
+			);
+			name = "Mipt CultureTests";
+			productName = "Mipt CultureTests";
+			productReference = D35175FC1CEDEC220096E47A /* Mipt CultureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D35176061CEDEC220096E47A /* Mipt CultureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D35176161CEDEC220096E47A /* Build configuration list for PBXNativeTarget "Mipt CultureUITests" */;
+			buildPhases = (
+				3AD8A3134B80AF198DD038FA /* 📦 Check Pods Manifest.lock */,
+				D35176031CEDEC220096E47A /* Sources */,
+				D35176041CEDEC220096E47A /* Frameworks */,
+				D35176051CEDEC220096E47A /* Resources */,
+				70E19D266C1C05402895A425 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D35176091CEDEC220096E47A /* PBXTargetDependency */,
+			);
+			name = "Mipt CultureUITests";
+			productName = "Mipt CultureUITests";
+			productReference = D35176071CEDEC220096E47A /* Mipt CultureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D35175E01CEDEC210096E47A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Ilya Velilyaev";
+				TargetAttributes = {
+					D35175E71CEDEC210096E47A = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2ZCQP5Y975;
+					};
+					D35175FB1CEDEC220096E47A = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2ZCQP5Y975;
+						TestTargetID = D35175E71CEDEC210096E47A;
+					};
+					D35176061CEDEC220096E47A = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2ZCQP5Y975;
+						TestTargetID = D35175E71CEDEC210096E47A;
+					};
+				};
+			};
+			buildConfigurationList = D35175E31CEDEC210096E47A /* Build configuration list for PBXProject "Mipt Culture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D35175DF1CEDEC210096E47A;
+			productRefGroup = D35175E91CEDEC210096E47A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D35175E71CEDEC210096E47A /* Mipt Culture */,
+				D35175FB1CEDEC220096E47A /* Mipt CultureTests */,
+				D35176061CEDEC220096E47A /* Mipt CultureUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D35175E61CEDEC210096E47A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3C0EC541CEE333E005A616D /* Ropa Sans Thin Italic.otf in Resources */,
+				D3C0EC561CEE333E005A616D /* Ropa Sans.otf in Resources */,
+				D3C0EC3E1CEE333E005A616D /* Ropa Sans ExtraLight.otf in Resources */,
+				D3C0EC4C1CEE333E005A616D /* Ropa Sans SC Italic.otf in Resources */,
+				D3C0EC451CEE333E005A616D /* Ropa Sans SC Black.otf in Resources */,
+				D3C0EC471CEE333E005A616D /* Ropa Sans SC Bold.otf in Resources */,
+				D3D7602E1CEE567700308A74 /* 4.jpg in Resources */,
+				D3C0EC551CEE333E005A616D /* Ropa Sans Thin.otf in Resources */,
+				D3C0EC4D1CEE333E005A616D /* Ropa Sans SC Light Italic.otf in Resources */,
+				D3C0EC3D1CEE333E005A616D /* Ropa Sans ExtraLight Italic.otf in Resources */,
+				D3C0EC511CEE333E005A616D /* Ropa Sans SC Thin Italic.otf in Resources */,
+				D35175F61CEDEC210096E47A /* LaunchScreen.storyboard in Resources */,
+				D3C0EC431CEE333E005A616D /* Ropa Sans Medium.otf in Resources */,
+				D3C0EC501CEE333E005A616D /* Ropa Sans SC Medium.otf in Resources */,
+				D3C0EC491CEE333E005A616D /* Ropa Sans SC ExtraBold.otf in Resources */,
+				D3C0EC531CEE333E005A616D /* Ropa Sans SC.otf in Resources */,
+				D3C0EC461CEE333E005A616D /* Ropa Sans SC Bold Italic.otf in Resources */,
+				D3C0EC4E1CEE333E005A616D /* Ropa Sans SC Light.otf in Resources */,
+				D3C0EC441CEE333E005A616D /* Ropa Sans SC Black Italic.otf in Resources */,
+				D3C0EC3A1CEE333E005A616D /* Ropa Sans Bold.otf in Resources */,
+				D3C0EC4A1CEE333E005A616D /* Ropa Sans SC ExtraLight Italic.otf in Resources */,
+				D3D7602D1CEE567700308A74 /* 3.jpg in Resources */,
+				D3C0EC3C1CEE333E005A616D /* Ropa Sans ExtraBold.otf in Resources */,
+				D3D760311CEE567700308A74 /* 7.jpg in Resources */,
+				D35175F31CEDEC210096E47A /* Assets.xcassets in Resources */,
+				D3C0EC421CEE333E005A616D /* Ropa Sans Medium Italic.otf in Resources */,
+				D3C0EC481CEE333E005A616D /* Ropa Sans SC ExtraBold Italic.otf in Resources */,
+				D3C0EC401CEE333E005A616D /* Ropa Sans Light Italic.otf in Resources */,
+				D3C0EC3B1CEE333E005A616D /* Ropa Sans ExtraBold Italic.otf in Resources */,
+				D3C0EC521CEE333E005A616D /* Ropa Sans SC Thin.otf in Resources */,
+				D3C0EC3F1CEE333E005A616D /* Ropa Sans Italic.otf in Resources */,
+				D3C0EC4F1CEE333E005A616D /* Ropa Sans SC Medium Italic.otf in Resources */,
+				D3C0EC381CEE333E005A616D /* Ropa Sans Black.otf in Resources */,
+				D3D7602C1CEE567700308A74 /* 2.jpg in Resources */,
+				D3D7602F1CEE567700308A74 /* 5.jpg in Resources */,
+				D3D760301CEE567700308A74 /* 6.jpg in Resources */,
+				D3C0EC4B1CEE333E005A616D /* Ropa Sans SC ExtraLight.otf in Resources */,
+				D3C0EC411CEE333E005A616D /* Ropa Sans Light.otf in Resources */,
+				D3C0EC371CEE333E005A616D /* Ropa Sans Black Italic.otf in Resources */,
+				D3C0EC391CEE333E005A616D /* Ropa Sans Bold Italic.otf in Resources */,
+				D3D7602B1CEE567700308A74 /* 1.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D35175FA1CEDEC220096E47A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D35176051CEDEC220096E47A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F8067DF12EADDF21E915FB7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3AD8A3134B80AF198DD038FA /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		70E19D266C1C05402895A425 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mipt CultureUITests/Pods-Mipt CultureUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86F454163B23DD0482F534F6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mipt CultureTests/Pods-Mipt CultureTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BA05E7D8374FA1EEA4EB4C3 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mipt Culture/Pods-Mipt Culture-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E33DD2447F88A105944425D6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mipt Culture/Pods-Mipt Culture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3BAB0927A2B133F43C6ADFC /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mipt CultureTests/Pods-Mipt CultureTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9FED3CD25BB021989C0A177 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D35175E41CEDEC210096E47A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D35175EE1CEDEC210096E47A /* ViewController.swift in Sources */,
+				D3A897FB1CEE1A39001951D8 /* Fetcher.swift in Sources */,
+				D3C0EC131CEE2E4F005A616D /* PerfTableViewCell.swift in Sources */,
+				D3C0EC151CEE2F48005A616D /* PerfTableViewController.swift in Sources */,
+				D35175EC1CEDEC210096E47A /* AppDelegate.swift in Sources */,
+				D3A897F91CEE1433001951D8 /* Perfomance.swift in Sources */,
+				D3D760331CEE5C1A00308A74 /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D35175F81CEDEC220096E47A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D35176011CEDEC220096E47A /* Mipt_CultureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D35176031CEDEC220096E47A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D351760C1CEDEC220096E47A /* Mipt_CultureUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D35175FE1CEDEC220096E47A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D35175E71CEDEC210096E47A /* Mipt Culture */;
+			targetProxy = D35175FD1CEDEC220096E47A /* PBXContainerItemProxy */;
+		};
+		D35176091CEDEC220096E47A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D35175E71CEDEC210096E47A /* Mipt Culture */;
+			targetProxy = D35176081CEDEC220096E47A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D35175F41CEDEC210096E47A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D35175F51CEDEC210096E47A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D351760E1CEDEC220096E47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D351760F1CEDEC220096E47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D35176111CEDEC220096E47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C7F4B8CFD4A960B7416CA99 /* Pods-Mipt Culture.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Mipt Culture/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miptprof.Mipt-Culture";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D35176121CEDEC220096E47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA5CC2BE38517826E0EDC9A1 /* Pods-Mipt Culture.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Mipt Culture/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miptprof.Mipt-Culture";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D35176141CEDEC220096E47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BD76937408434236E2820BD /* Pods-Mipt CultureTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Mipt CultureTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miptprof.Mipt-CultureTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mipt Culture.app/Mipt Culture";
+			};
+			name = Debug;
+		};
+		D35176151CEDEC220096E47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C015E85FC9DEB37DEF3EBD1 /* Pods-Mipt CultureTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Mipt CultureTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miptprof.Mipt-CultureTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mipt Culture.app/Mipt Culture";
+			};
+			name = Release;
+		};
+		D35176171CEDEC220096E47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64AB1B21EEF82FA924A06B02 /* Pods-Mipt CultureUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "Mipt CultureUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miptprof.Mipt-CultureUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Mipt Culture";
+			};
+			name = Debug;
+		};
+		D35176181CEDEC220096E47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14312C47B80B016DC194996A /* Pods-Mipt CultureUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "Mipt CultureUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miptprof.Mipt-CultureUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Mipt Culture";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D35175E31CEDEC210096E47A /* Build configuration list for PBXProject "Mipt Culture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D351760E1CEDEC220096E47A /* Debug */,
+				D351760F1CEDEC220096E47A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D35176101CEDEC220096E47A /* Build configuration list for PBXNativeTarget "Mipt Culture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D35176111CEDEC220096E47A /* Debug */,
+				D35176121CEDEC220096E47A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D35176131CEDEC220096E47A /* Build configuration list for PBXNativeTarget "Mipt CultureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D35176141CEDEC220096E47A /* Debug */,
+				D35176151CEDEC220096E47A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D35176161CEDEC220096E47A /* Build configuration list for PBXNativeTarget "Mipt CultureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D35176171CEDEC220096E47A /* Debug */,
+				D35176181CEDEC220096E47A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D35175E01CEDEC210096E47A /* Project object */;
+}
