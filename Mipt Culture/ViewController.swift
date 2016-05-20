@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         UIView.animateWithDuration(1, animations: { 
-            self.backgroundImageView.alpha = 0.25
+            self.backgroundImageView.alpha = 0.1
         }) { (completed: Bool) in
             Fetcher.updateSavedData()
             let vc = PerfTableViewController()

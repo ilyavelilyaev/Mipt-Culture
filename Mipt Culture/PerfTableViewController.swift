@@ -12,6 +12,11 @@ import Haneke
 class PerfTableViewController: UITableViewController {
     var perfomances = [Perfomance]()
     var placeholders = [UIImage]()
+    let blackView = UIControl(frame: UIScreen.mainScreen().bounds)
+    let underTextViewShadow = TextViewShadow()
+    let textView = UITextView()
+
+    var selectedRow = -1
     
     func loadPlaceholders() {
         placeholders.append(UIImage(named: "placeholder1")!)
@@ -29,12 +34,18 @@ class PerfTableViewController: UITableViewController {
     
     override func loadView() {
         super.loadView()
+        for family: String in UIFont.familyNames()
+        {
+            print("\(family)")
+            for names: String in UIFont.fontNamesForFamilyName(family)
+            {
+                print("== \(names)")
+            }
+        }
         view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.25)
-        update()
+        updateData()
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(updateData), forControlEvents: .ValueChanged)
-        
-        title = "Афиша"
         
         tableView.separatorStyle = .None
     
@@ -61,7 +72,6 @@ class PerfTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.registerClass(PerfTableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
     }
 
@@ -81,35 +91,116 @@ class PerfTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! PerfTableViewCell
+        cell.index = indexPath.row
+        cell.tableVC = self
         let placeholder = UIImageView(image:placeholders[indexPath.row % 14])
         
         cell.addSubview(placeholder)
         placeholder.snp_makeConstraints { (make) in
-            make.edges.equalTo(cell).inset(5)
+            make.width.equalTo(cell)
+            make.height.equalTo(placeholder.snp_width).dividedBy(2)
+            make.centerX.equalTo(cell)
+            make.top.equalTo(cell.snp_top).inset(2)
         }
         
         placeholder.hnk_setImageFromURL(perfomances[indexPath.row].tablePicURL)
         
+        if selectedRow == indexPath.row {
+            
+            cell.addSubview(cell.stackView)
+            cell.stackView.snp_makeConstraints(closure: { (make) in
+                make.top.equalTo(placeholder.snp_bottom).offset(15)
+                make.left.equalTo(placeholder.snp_left).offset(20)
+            })
+            
+        } else {
+            cell.stackView.removeFromSuperview()
+        }
+        
         return cell
     }
     
+    
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if selectedRow == indexPath.row {
+            return view.bounds.width
+        }
         return view.bounds.width / 2
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! PerfTableViewCell
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        if indexPath.row == selectedRow {
+            selectedRow = -1
+            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        } else if selectedRow != -1 {
+            let prevPath = NSIndexPath(forRow: selectedRow, inSection: 0)
+            selectedRow = -1
+            tableView.reloadRowsAtIndexPaths([prevPath], withRowAnimation: .Automatic)
+        } else {
+            selectedRow = indexPath.row
+            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
 
-        UIView.animateWithDuration(1) { 
-            
+    }
+    
+    func showDescription(index: Int) {
+        
+        blackView.backgroundColor = .blackColor()
+        blackView.alpha = 0.0
+        view.addSubview(blackView)
+        tableView.scrollEnabled = false
+        view.addSubview(underTextViewShadow)
+        view.addSubview(textView)
+        blackView.addTarget(self, action: #selector(hideDescription), forControlEvents: .TouchUpInside)
+        textView.backgroundColor = .whiteColor()
+        textView.snp_makeConstraints { (make) in
+            make.center.equalTo(view)
+            make.width.height.equalTo(view.snp_width).inset(10)
+        }
+        underTextViewShadow.snp_makeConstraints { (make) in
+            make.center.equalTo(view)
+            make.width.height.equalTo(view.snp_width).inset(10)
         }
         
-        let vc = DetailViewController()
-        let nvc = UINavigationController(rootViewController: vc)
+        textView.font = UIFont(name: "RopaSans-Thin", size: 16)
+        textView.text = perfomances[index].descr
+        textView.scrollEnabled = true
+        textView.editable = false
+        textView.selectable = false
+
+        underTextViewShadow.transform = CGAffineTransformMakeTranslation(0, -1000)
+        textView.transform = CGAffineTransformMakeTranslation(0, -1000)
+        UIView.animateWithDuration(0.7, animations: {
+            self.blackView.alpha = 0.3
+            self.textView.transform = CGAffineTransformMakeTranslation(0, 0)
+            self.underTextViewShadow.transform = CGAffineTransformMakeTranslation(0, 0)
+        }) { (completed: Bool) in
+            //TODO
+                        //Place description in scrollView
+            //Add Swipe gesture recognizer
+        }
         
-        self.presentViewController(nvc, animated: true, completion: nil)
+        
+
+        
+        
     }
+
+    func hideDescription() {
+        UIView.animateWithDuration(0.7, animations: {
+            self.blackView.alpha = 0
+            self.textView.transform = CGAffineTransformMakeTranslation(0, -1000)
+            self.underTextViewShadow.transform = CGAffineTransformMakeTranslation(0, -1000)
+        }) { (completed: Bool) in
+            self.blackView.removeFromSuperview()
+            self.textView.removeFromSuperview()
+            self.underTextViewShadow.removeFromSuperview()
+            self.tableView.scrollEnabled = true
+        }
+
+    }
+    
    
 }

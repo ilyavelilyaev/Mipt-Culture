@@ -18,6 +18,7 @@
 		D351760C1CEDEC220096E47A /* Mipt_CultureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351760B1CEDEC220096E47A /* Mipt_CultureUITests.swift */; };
 		D3A897F91CEE1433001951D8 /* Perfomance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A897F81CEE1433001951D8 /* Perfomance.swift */; };
 		D3A897FB1CEE1A39001951D8 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A897FA1CEE1A39001951D8 /* Fetcher.swift */; };
+		D3B7702D1CEF3F2700327248 /* TextViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B7702C1CEF3F2700327248 /* TextViewShadow.swift */; };
 		D3C0EC131CEE2E4F005A616D /* PerfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0EC121CEE2E4F005A616D /* PerfTableViewCell.swift */; };
 		D3C0EC151CEE2F48005A616D /* PerfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0EC141CEE2F48005A616D /* PerfTableViewController.swift */; };
 		D3C0EC371CEE333E005A616D /* Ropa Sans Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D3C0EC171CEE333E005A616D /* Ropa Sans Black Italic.otf */; };
@@ -103,6 +104,7 @@
 		D351760D1CEDEC220096E47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3A897F81CEE1433001951D8 /* Perfomance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Perfomance.swift; sourceTree = "<group>"; };
 		D3A897FA1CEE1A39001951D8 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
+		D3B7702C1CEF3F2700327248 /* TextViewShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewShadow.swift; sourceTree = "<group>"; };
 		D3C0EC121CEE2E4F005A616D /* PerfTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfTableViewCell.swift; sourceTree = "<group>"; };
 		D3C0EC141CEE2F48005A616D /* PerfTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfTableViewController.swift; sourceTree = "<group>"; };
 		D3C0EC171CEE333E005A616D /* Ropa Sans Black Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ropa Sans Black Italic.otf"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				D3A897FA1CEE1A39001951D8 /* Fetcher.swift */,
 				D35175ED1CEDEC210096E47A /* ViewController.swift */,
 				D3C0EC141CEE2F48005A616D /* PerfTableViewController.swift */,
+				D3B7702C1CEF3F2700327248 /* TextViewShadow.swift */,
 				D3D760321CEE5C1A00308A74 /* DetailViewController.swift */,
 				D3C0EC121CEE2E4F005A616D /* PerfTableViewCell.swift */,
 				D35175F21CEDEC210096E47A /* Assets.xcassets */,
@@ -623,6 +626,7 @@
 				D3C0EC151CEE2F48005A616D /* PerfTableViewController.swift in Sources */,
 				D35175EC1CEDEC210096E47A /* AppDelegate.swift in Sources */,
 				D3A897F91CEE1433001951D8 /* Perfomance.swift in Sources */,
+				D3B7702D1CEF3F2700327248 /* TextViewShadow.swift in Sources */,
 				D3D760331CEE5C1A00308A74 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

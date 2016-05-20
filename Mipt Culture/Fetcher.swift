@@ -19,14 +19,15 @@ class Fetcher {
                 if let objects = objects {
                     var perfomances = [Perfomance]()
                     for object in objects {
-                        let perfomance = Perfomance(date: object["date"] as? NSDate,
-                            photoURL: NSURL(string: object["photoURL"] as! String),
+                        let perfomance = Perfomance(
+                            date: object["date"] as? NSDate,
                             name: object["name"] as! String,
                             theatre: object["theatre"] as? String,
                             price: object["price"] as! Int,
                             regURL: NSURL(string: object["regURL"] as! String),
                             adminURL: NSURL(string: object["adminURL"] as! String),
-                            tablePicURL: NSURL(string: object["tablePicURL"] as! String)!)
+                            tablePicURL: NSURL(string: object["tablePicURL"] as! String)!,
+                            descr: object["description"] as! String)
                         perfomances.append(perfomance)
                     }
                     saveNewData(perfomances)

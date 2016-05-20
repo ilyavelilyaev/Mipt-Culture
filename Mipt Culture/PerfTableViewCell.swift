@@ -10,7 +10,16 @@ import UIKit
 
 class PerfTableViewCell: UITableViewCell {
     
-   
+    let stackView = UIStackView()
+    let moreButton = UIButton(type: .Custom)
+    let enrollButton = UIButton(type: .Custom)
+    let contactButton = UIButton(type: .Custom)
+    var index = Int()
+    weak var tableVC: PerfTableViewController!
+    
+    
+    var perfomamces = [Perfomance]()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -19,7 +28,54 @@ class PerfTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clearColor()
         textLabel?.font = UIFont(name: "RopaSans", size: 15)
+        let selBckgView = UIView()
+        selBckgView.backgroundColor = .clearColor()
+        selectedBackgroundView = selBckgView
         
+        
+        let stickImage0 = UIImageView(image: UIImage(named: "stick"))
+        let moreStackView = UIStackView(arrangedSubviews: [stickImage0, moreButton])
+        moreStackView.spacing = 10
+        moreButton.setTitle("Подробнее", forState: .Normal)
+        moreButton.setTitleColor(.blackColor(), forState: .Normal)
+        moreButton.setTitleColor(.grayColor(), forState: .Highlighted)
+        moreButton.titleLabel!.font = UIFont(name: "RopaSans", size: 30)
+        moreButton.addTarget(self, action: #selector(showDescription), forControlEvents: .TouchUpInside)
+        moreStackView.axis = .Horizontal
+        
+        stackView.addArrangedSubview(moreStackView)
+
+        let stickImage1 = UIImageView(image: UIImage(named: "stick"))
+        let enrollStackView = UIStackView(arrangedSubviews: [stickImage1, enrollButton])
+        enrollStackView.spacing = 10
+        enrollButton.setTitle("Записаться", forState: .Normal)
+        enrollButton.setTitleColor(.blackColor(), forState: .Normal)
+        enrollButton.setTitleColor(.grayColor(), forState: .Highlighted)
+        enrollButton.titleLabel!.font = UIFont(name: "RopaSans", size: 30)
+        enrollStackView.axis = .Horizontal
+        
+        stackView.addArrangedSubview(enrollStackView)
+        
+        let stickImage2 = UIImageView(image: UIImage(named: "stick"))
+        let contactStackView = UIStackView(arrangedSubviews: [stickImage2, contactButton])
+        contactStackView.spacing = 10
+        contactButton.setTitle("Написать администратору", forState: .Normal)
+        contactButton.setTitleColor(.blackColor(), forState: .Normal)
+        contactButton.setTitleColor(.grayColor(), forState: .Highlighted)
+        contactButton.titleLabel!.font = UIFont(name: "RopaSans", size: 27)
+        contactButton.addTarget(self, action: #selector(contactVK), forControlEvents: .TouchUpInside)
+        contactStackView.axis = .Horizontal
+        
+        
+        stackView.addArrangedSubview(contactStackView)
+
+        stackView.axis = .Vertical
+        stackView.spacing = 20
+        stackView.alignment = .Leading
+        
+        if let savedPerfs = loadPerfomances() {
+            perfomamces = savedPerfs
+        }
         
     }
     
@@ -31,6 +87,17 @@ class PerfTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func loadPerfomances() -> [Perfomance]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Perfomance.ArchiveURL.path!) as? [Perfomance]
+    }
+    
+    func showDescription() {
+        tableVC.showDescription(index)
+    }
+    func contactVK()  {
+        UIApplication.sharedApplication().openURL(perfomamces[index].adminURL!)
     }
 
 }
