@@ -39,7 +39,7 @@ class Fetcher {
     static func saveNewData(perfomances: [Perfomance]) {
         
         let newPerfs = perfomances.sort { (first, second) -> Bool in
-            return first.date!.compare(second.date!) == .OrderedDescending
+            return first.date!.compare(second.date!) == .OrderedAscending
         }
         
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(newPerfs, toFile: Perfomance.ArchiveURL.path!)

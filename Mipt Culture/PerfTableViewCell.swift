@@ -54,6 +54,7 @@ class PerfTableViewCell: UITableViewCell {
         enrollButton.setTitleColor(.blackColor(), forState: .Normal)
         enrollButton.setTitleColor(.grayColor(), forState: .Highlighted)
         enrollButton.titleLabel!.font = UIFont(name: "RopaSans", size: 30)
+        enrollButton.addTarget(self, action: #selector(enroll), forControlEvents: .TouchUpInside)
         enrollStackView.axis = .Horizontal
         priceLabel.font = UIFont(name: "RopaSans", size:30)
         enrollStackView.addArrangedSubview(priceLabel)
@@ -107,6 +108,9 @@ class PerfTableViewCell: UITableViewCell {
     }
     func contactVK()  {
         UIApplication.sharedApplication().openURL(perfomamces[index].adminURL!)
+    }
+    func enroll() {
+        UIApplication.sharedApplication().openURL(perfomamces[index].regURL!)
     }
     
 }
