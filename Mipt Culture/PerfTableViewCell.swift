@@ -15,6 +15,8 @@ class PerfTableViewCell: UITableViewCell {
     let enrollButton = UIButton(type: .Custom)
     let contactButton = UIButton(type: .Custom)
     var index = Int()
+    let priceLabel = UILabel()
+
     weak var tableVC: PerfTableViewController!
     
     
@@ -53,6 +55,13 @@ class PerfTableViewCell: UITableViewCell {
         enrollButton.setTitleColor(.grayColor(), forState: .Highlighted)
         enrollButton.titleLabel!.font = UIFont(name: "RopaSans", size: 30)
         enrollStackView.axis = .Horizontal
+        priceLabel.font = UIFont(name: "RopaSans", size:30)
+        enrollStackView.addArrangedSubview(priceLabel)
+
+        priceLabel.snp_makeConstraints { (make) in
+            make.trailing.equalTo(enrollStackView.snp_trailing)
+        }
+        
         
         stackView.addArrangedSubview(enrollStackView)
         
@@ -99,5 +108,5 @@ class PerfTableViewCell: UITableViewCell {
     func contactVK()  {
         UIApplication.sharedApplication().openURL(perfomamces[index].adminURL!)
     }
-
+    
 }

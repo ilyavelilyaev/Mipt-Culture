@@ -107,6 +107,8 @@ class PerfTableViewController: UITableViewController {
         placeholder.hnk_setImageFromURL(perfomances[indexPath.row].tablePicURL)
         
         if selectedRow == indexPath.row {
+            let price = perfomances[indexPath.row].price
+            cell.priceLabel.text = (price != 0) ?  "(цена: \(price) Р)" : "(бесплатно)"
             
             cell.addSubview(cell.stackView)
             cell.stackView.snp_makeConstraints(closure: { (make) in
@@ -164,7 +166,7 @@ class PerfTableViewController: UITableViewController {
             make.width.height.equalTo(view.snp_width).inset(10)
         }
         
-        textView.font = UIFont(name: "RopaSans-Thin", size: 16)
+        textView.font = UIFont(name: "RopaSansLight", size: 16)
         textView.text = perfomances[index].descr
         textView.scrollEnabled = true
         textView.editable = false
