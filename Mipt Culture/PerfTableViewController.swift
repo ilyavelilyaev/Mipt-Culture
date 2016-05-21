@@ -163,6 +163,7 @@ class PerfTableViewController: UITableViewController {
         textView.scrollEnabled = true
         textView.editable = false
         textView.selectable = false
+        textView.textContainerInset = UIEdgeInsetsMake(15, 10, 15, 10)
 
         underTextViewShadow.transform = CGAffineTransformMakeTranslation(0, -1000)
         textView.transform = CGAffineTransformMakeTranslation(0, -1000)
@@ -171,9 +172,9 @@ class PerfTableViewController: UITableViewController {
             self.textView.transform = CGAffineTransformMakeTranslation(0, 0)
             self.underTextViewShadow.transform = CGAffineTransformMakeTranslation(0, 0)
         }) { (completed: Bool) in
-            //TODO
-                        //Place description in scrollView
-            //Add Swipe gesture recognizer
+            //TODO:
+            //Add swipe-up gesture recognizer
+
         }
         
         

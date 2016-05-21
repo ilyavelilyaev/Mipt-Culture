@@ -16,7 +16,12 @@ class PerfTableViewCell: UITableViewCell {
     let contactButton = UIButton(type: .Custom)
     var index = Int()
     let priceLabel = UILabel()
-
+    let screenWidth = UIScreen.mainScreen().bounds.width
+    let screenHeight = UIScreen.mainScreen().bounds.height
+    let verticalSpacingScaleFactor = CGFloat(0.03)
+    let fontSizeScaleFactor = CGFloat(0.045)
+    let secondFontSizeScaleFactor = CGFloat(0.04)
+    let horizontalSpacingScaleFactor = CGFloat(0.027)
     weak var tableVC: PerfTableViewController!
     
     
@@ -29,7 +34,6 @@ class PerfTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clearColor()
-        textLabel?.font = UIFont(name: "RopaSans", size: 15)
         let selBckgView = UIView()
         selBckgView.backgroundColor = .clearColor()
         selectedBackgroundView = selBckgView
@@ -37,11 +41,11 @@ class PerfTableViewCell: UITableViewCell {
         
         let stickImage0 = UIImageView(image: UIImage(named: "stick"))
         let moreStackView = UIStackView(arrangedSubviews: [stickImage0, moreButton])
-        moreStackView.spacing = 10
+        moreStackView.spacing = horizontalSpacingScaleFactor * screenWidth
         moreButton.setTitle("Подробнее", forState: .Normal)
         moreButton.setTitleColor(.blackColor(), forState: .Normal)
         moreButton.setTitleColor(.grayColor(), forState: .Highlighted)
-        moreButton.titleLabel!.font = UIFont(name: "RopaSans", size: 30)
+        moreButton.titleLabel!.font = UIFont(name: "RopaSans", size: fontSizeScaleFactor * screenHeight)
         moreButton.addTarget(self, action: #selector(showDescription), forControlEvents: .TouchUpInside)
         moreStackView.axis = .Horizontal
         
@@ -49,14 +53,14 @@ class PerfTableViewCell: UITableViewCell {
 
         let stickImage1 = UIImageView(image: UIImage(named: "stick"))
         let enrollStackView = UIStackView(arrangedSubviews: [stickImage1, enrollButton])
-        enrollStackView.spacing = 10
+        enrollStackView.spacing = horizontalSpacingScaleFactor * screenWidth
         enrollButton.setTitle("Записаться", forState: .Normal)
         enrollButton.setTitleColor(.blackColor(), forState: .Normal)
         enrollButton.setTitleColor(.grayColor(), forState: .Highlighted)
-        enrollButton.titleLabel!.font = UIFont(name: "RopaSans", size: 30)
+        enrollButton.titleLabel!.font = UIFont(name: "RopaSans", size: fontSizeScaleFactor * screenHeight)
         enrollButton.addTarget(self, action: #selector(enroll), forControlEvents: .TouchUpInside)
         enrollStackView.axis = .Horizontal
-        priceLabel.font = UIFont(name: "RopaSans", size:30)
+        priceLabel.font = UIFont(name: "RopaSans", size:fontSizeScaleFactor * screenHeight)
         enrollStackView.addArrangedSubview(priceLabel)
 
         priceLabel.snp_makeConstraints { (make) in
@@ -68,11 +72,11 @@ class PerfTableViewCell: UITableViewCell {
         
         let stickImage2 = UIImageView(image: UIImage(named: "stick"))
         let contactStackView = UIStackView(arrangedSubviews: [stickImage2, contactButton])
-        contactStackView.spacing = 10
+        contactStackView.spacing = horizontalSpacingScaleFactor * screenWidth
         contactButton.setTitle("Написать администратору", forState: .Normal)
         contactButton.setTitleColor(.blackColor(), forState: .Normal)
         contactButton.setTitleColor(.grayColor(), forState: .Highlighted)
-        contactButton.titleLabel!.font = UIFont(name: "RopaSans", size: 27)
+        contactButton.titleLabel!.font = UIFont(name: "RopaSans", size: secondFontSizeScaleFactor * screenHeight)
         contactButton.addTarget(self, action: #selector(contactVK), forControlEvents: .TouchUpInside)
         contactStackView.axis = .Horizontal
         
@@ -80,13 +84,12 @@ class PerfTableViewCell: UITableViewCell {
         stackView.addArrangedSubview(contactStackView)
 
         stackView.axis = .Vertical
-        stackView.spacing = 20
+        stackView.spacing = verticalSpacingScaleFactor * screenHeight
         stackView.alignment = .Leading
         
         if let savedPerfs = loadPerfomances() {
             perfomamces = savedPerfs
         }
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

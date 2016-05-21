@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     override func loadView() {
         super.loadView()
         loadBackground()
-        
     }
     
     override func viewDidLoad() {
