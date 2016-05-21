@@ -34,14 +34,6 @@ class PerfTableViewController: UITableViewController {
     
     override func loadView() {
         super.loadView()
-        for family: String in UIFont.familyNames()
-        {
-            print("\(family)")
-            for names: String in UIFont.fontNamesForFamilyName(family)
-            {
-                print("== \(names)")
-            }
-        }
         view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.25)
         updateData()
         refreshControl = UIRefreshControl()
@@ -198,6 +190,7 @@ class PerfTableViewController: UITableViewController {
         }) { (completed: Bool) in
             self.blackView.removeFromSuperview()
             self.textView.removeFromSuperview()
+            self.textView.contentOffset = CGPointZero
             self.underTextViewShadow.removeFromSuperview()
             self.tableView.scrollEnabled = true
         }
