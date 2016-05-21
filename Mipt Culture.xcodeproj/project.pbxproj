@@ -90,7 +90,7 @@
 		AFE7C90BF10F0480745EB461 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5CC2BE38517826E0EDC9A1 /* Pods-Mipt Culture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mipt Culture.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mipt Culture/Pods-Mipt Culture.release.xcconfig"; sourceTree = "<group>"; };
 		C8F706E7DCA6EF1039C0BC2C /* Pods_Mipt_CultureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mipt_CultureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D35175E81CEDEC210096E47A /* Mipt Culture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mipt Culture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35175E81CEDEC210096E47A /* КФ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "КФ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35175EB1CEDEC210096E47A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D35175ED1CEDEC210096E47A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D35175F21CEDEC210096E47A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 		D35175E91CEDEC210096E47A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D35175E81CEDEC210096E47A /* Mipt Culture.app */,
+				D35175E81CEDEC210096E47A /* КФ.app */,
 				D35175FC1CEDEC220096E47A /* Mipt CultureTests.xctest */,
 				D35176071CEDEC220096E47A /* Mipt CultureUITests.xctest */,
 			);
@@ -320,9 +320,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D35175E71CEDEC210096E47A /* Mipt Culture */ = {
+		D35175E71CEDEC210096E47A /* КФ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D35176101CEDEC220096E47A /* Build configuration list for PBXNativeTarget "Mipt Culture" */;
+			buildConfigurationList = D35176101CEDEC220096E47A /* Build configuration list for PBXNativeTarget "КФ" */;
 			buildPhases = (
 				F9FED3CD25BB021989C0A177 /* 📦 Check Pods Manifest.lock */,
 				D35175E41CEDEC210096E47A /* Sources */,
@@ -335,9 +335,9 @@
 			);
 			dependencies = (
 			);
-			name = "Mipt Culture";
+			name = "КФ";
 			productName = "Mipt Culture";
-			productReference = D35175E81CEDEC210096E47A /* Mipt Culture.app */;
+			productReference = D35175E81CEDEC210096E47A /* КФ.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D35175FB1CEDEC220096E47A /* Mipt CultureTests */ = {
@@ -393,7 +393,7 @@
 				TargetAttributes = {
 					D35175E71CEDEC210096E47A = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 2ZCQP5Y975;
+						DevelopmentTeam = WXYPE6JK9P;
 					};
 					D35175FB1CEDEC220096E47A = {
 						CreatedOnToolsVersion = 7.3;
@@ -420,7 +420,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D35175E71CEDEC210096E47A /* Mipt Culture */,
+				D35175E71CEDEC210096E47A /* КФ */,
 				D35175FB1CEDEC220096E47A /* Mipt CultureTests */,
 				D35176061CEDEC220096E47A /* Mipt CultureUITests */,
 			);
@@ -652,12 +652,12 @@
 /* Begin PBXTargetDependency section */
 		D35175FE1CEDEC220096E47A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D35175E71CEDEC210096E47A /* Mipt Culture */;
+			target = D35175E71CEDEC210096E47A /* КФ */;
 			targetProxy = D35175FD1CEDEC220096E47A /* PBXContainerItemProxy */;
 		};
 		D35176091CEDEC220096E47A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D35175E71CEDEC210096E47A /* Mipt Culture */;
+			target = D35175E71CEDEC210096E47A /* КФ */;
 			targetProxy = D35176081CEDEC220096E47A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -763,10 +763,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Mipt Culture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.miptprof.Mipt-Culture";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miptprof.miptculture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -776,10 +778,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Mipt Culture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.miptprof.Mipt-Culture";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miptprof.miptculture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -845,7 +849,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D35176101CEDEC220096E47A /* Build configuration list for PBXNativeTarget "Mipt Culture" */ = {
+		D35176101CEDEC220096E47A /* Build configuration list for PBXNativeTarget "КФ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D35176111CEDEC220096E47A /* Debug */,

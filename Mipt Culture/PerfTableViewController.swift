@@ -25,9 +25,8 @@ class PerfTableViewController: UITableViewController {
         placeholders.append(UIImage(named: "placeholder4")!)
         placeholders.append(UIImage(named: "placeholder5")!)
         placeholders.append(UIImage(named: "placeholder6")!)
-        placeholders.append(UIImage(named: "placeholder7")!)
         placeholders.appendContentsOf(placeholders)
-        for _ in 0...14 {
+        for _ in 0...12 {
             placeholders.sortInPlace { (_,_) in arc4random() < arc4random() }
         }
     }
@@ -86,7 +85,7 @@ class PerfTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! PerfTableViewCell
         cell.index = indexPath.row
         cell.tableVC = self
-        let placeholder = UIImageView(image:placeholders[indexPath.row % 14])
+        let placeholder = UIImageView(image:placeholders[indexPath.row % placeholders.count])
         
         cell.addSubview(placeholder)
         placeholder.snp_makeConstraints { (make) in
