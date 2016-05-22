@@ -38,9 +38,12 @@ class Fetcher {
     
     static func saveNewData(perfomances: [Perfomance]) {
         
-        let newPerfs = perfomances.sort { (first, second) -> Bool in
+        let newPerfs = perfomances.sort({ (first, second) -> Bool in
             return first.date!.compare(second.date!) == .OrderedAscending
+        }).filter { (perf) -> Bool in
+            return perf.date!.compare(NSDate()) == .OrderedDescending
         }
+        
         
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(newPerfs, toFile: Perfomance.ArchiveURL.path!)
         NSNotificationCenter.defaultCenter().postNotificationName("updatedPerfomances", object: nil)
