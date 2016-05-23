@@ -3,7 +3,7 @@
 # Uncomment this line if you're using Swift
  use_frameworks!
 
-target 'KP'
+target 'КФ'
 pod 'SnapKit'
 pod 'CalendarView'
 pod 'Parse'
