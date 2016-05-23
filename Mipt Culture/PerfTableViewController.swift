@@ -58,7 +58,7 @@ class PerfTableViewController: UITableViewController {
         if let savedPerfomances = loadPerfomances() {
             perfomances = savedPerfomances
         }
-        self.tableView.reloadData()
+        tableView.reloadData()
         refreshControl?.endRefreshing()
     }
 

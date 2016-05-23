@@ -23,6 +23,7 @@ class Fetcher {
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) in
             if let error = error {
                 print ("Error while quering! \(error.localizedDescription)")
+                self.updateSavedData()
                 return
             }
 

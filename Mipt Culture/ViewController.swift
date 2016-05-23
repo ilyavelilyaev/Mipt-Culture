@@ -40,6 +40,9 @@ class ViewController: UIViewController {
     
     func showInternetConnectionFail() {
         showSadHare()
+        NSKeyedArchiver.archiveRootObject([Perfomance](), toFile: Perfomance.ArchiveURL.path!)
+        vc.tableView.reloadData()
+        vc.refreshControl?.endRefreshing()
         problemLabel.text = "Проблемы с соединением"
     }
     
