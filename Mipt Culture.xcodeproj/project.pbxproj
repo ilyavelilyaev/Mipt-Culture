@@ -60,7 +60,6 @@
 		D3D7602F1CEE567700308A74 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3D760281CEE567700308A74 /* 5.jpg */; };
 		D3D760301CEE567700308A74 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3D760291CEE567700308A74 /* 6.jpg */; };
 		D3D760311CEE567700308A74 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3D7602A1CEE567700308A74 /* 7.jpg */; };
-		D3D760331CEE5C1A00308A74 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D760321CEE5C1A00308A74 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,7 +145,6 @@
 		D3D760281CEE567700308A74 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		D3D760291CEE567700308A74 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
 		D3D7602A1CEE567700308A74 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
-		D3D760321CEE5C1A00308A74 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E788DD8B6F8214EA5E209212 /* Pods_Mipt_CultureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mipt_CultureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -224,7 +222,6 @@
 				D35175ED1CEDEC210096E47A /* ViewController.swift */,
 				D3C0EC141CEE2F48005A616D /* PerfTableViewController.swift */,
 				D3B7702C1CEF3F2700327248 /* TextViewShadow.swift */,
-				D3D760321CEE5C1A00308A74 /* DetailViewController.swift */,
 				D3C0EC121CEE2E4F005A616D /* PerfTableViewCell.swift */,
 				D35175F21CEDEC210096E47A /* Assets.xcassets */,
 				D35175F41CEDEC210096E47A /* LaunchScreen.storyboard */,
@@ -627,7 +624,6 @@
 				D35175EC1CEDEC210096E47A /* AppDelegate.swift in Sources */,
 				D3A897F91CEE1433001951D8 /* Perfomance.swift in Sources */,
 				D3B7702D1CEF3F2700327248 /* TextViewShadow.swift in Sources */,
-				D3D760331CEE5C1A00308A74 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

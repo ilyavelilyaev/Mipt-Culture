@@ -22,22 +22,19 @@ class PerfTableViewCell: UITableViewCell {
     let fontSizeScaleFactor = CGFloat(0.045)
     let secondFontSizeScaleFactor = CGFloat(0.04)
     let horizontalSpacingScaleFactor = CGFloat(0.027)
+    
     weak var tableVC: PerfTableViewController!
-    
-    
+
     var perfomamces = [Perfomance]()
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         backgroundColor = .clearColor()
+        
         let selBckgView = UIView()
         selBckgView.backgroundColor = .clearColor()
         selectedBackgroundView = selBckgView
-        
         
         let stickImage0 = UIImageView(image: UIImage(named: "stick"))
         let moreStackView = UIStackView(arrangedSubviews: [stickImage0, moreButton])
@@ -51,6 +48,7 @@ class PerfTableViewCell: UITableViewCell {
         
         stackView.addArrangedSubview(moreStackView)
 
+        //TODO: Delete price label and add price to button titile
         let stickImage1 = UIImageView(image: UIImage(named: "stick"))
         let enrollStackView = UIStackView(arrangedSubviews: [stickImage1, enrollButton])
         enrollStackView.spacing = horizontalSpacingScaleFactor * screenWidth
@@ -80,7 +78,6 @@ class PerfTableViewCell: UITableViewCell {
         contactButton.addTarget(self, action: #selector(contactVK), forControlEvents: .TouchUpInside)
         contactStackView.axis = .Horizontal
         
-        
         stackView.addArrangedSubview(contactStackView)
 
         stackView.axis = .Vertical
@@ -96,12 +93,6 @@ class PerfTableViewCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func loadPerfomances() -> [Perfomance]? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Perfomance.ArchiveURL.path!) as? [Perfomance]
     }
@@ -109,11 +100,12 @@ class PerfTableViewCell: UITableViewCell {
     func showDescription() {
         tableVC.showDescription(index)
     }
+    
     func contactVK()  {
         UIApplication.sharedApplication().openURL(perfomamces[index].adminURL!)
     }
+    
     func enroll() {
         UIApplication.sharedApplication().openURL(perfomamces[index].regURL!)
     }
-    
 }

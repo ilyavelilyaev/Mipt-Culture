@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        //No internet connction error returns code 100. Need to show if there are problems with internet. And try again later.
+        
         return true
     }
 

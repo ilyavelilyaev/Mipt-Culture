@@ -33,8 +33,11 @@ class PerfTableViewController: UITableViewController {
     
     override func loadView() {
         super.loadView()
-        view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.25)
+        
+        view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.25) //Will be deleted or refactored
+        
         updateData()
+        
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(updateData), forControlEvents: .ValueChanged)
         
@@ -43,8 +46,10 @@ class PerfTableViewController: UITableViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(update), name: "updatedPerfomances", object: nil)
         
         loadPlaceholders()
+        
+        //TODO: If zero perfomances or internet problems, show it.
     }
-    
+
     func loadPerfomances() -> [Perfomance]? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Perfomance.ArchiveURL.path!) as? [Perfomance]
     }
@@ -66,9 +71,6 @@ class PerfTableViewController: UITableViewController {
         tableView.registerClass(PerfTableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 
     // MARK: - Table view data source
 
@@ -85,8 +87,8 @@ class PerfTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! PerfTableViewCell
         cell.index = indexPath.row
         cell.tableVC = self
-        let placeholder = UIImageView(image:placeholders[indexPath.row % placeholders.count])
         
+        let placeholder = UIImageView(image:placeholders[indexPath.row % placeholders.count])
         cell.addSubview(placeholder)
         placeholder.snp_makeConstraints { (make) in
             make.width.equalTo(cell)
@@ -102,10 +104,10 @@ class PerfTableViewController: UITableViewController {
             cell.priceLabel.text = (price != 0) ?  "(цена: \(price) Р)" : "(бесплатно)"
             
             cell.addSubview(cell.stackView)
-            cell.stackView.snp_makeConstraints(closure: { (make) in
+            cell.stackView.snp_makeConstraints { (make) in
                 make.top.equalTo(placeholder.snp_bottom).offset(15)
                 make.left.equalTo(placeholder.snp_left).offset(20)
-            })
+            }
             
         } else {
             cell.stackView.removeFromSuperview()
@@ -123,40 +125,41 @@ class PerfTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var indexPathesToBeReloaded = [NSIndexPath]()
         
-        if indexPath.row == selectedRow {
+        switch selectedRow {
+        case indexPath.row:
+            indexPathesToBeReloaded.append(indexPath)
             selectedRow = -1
-            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-        } else if selectedRow != -1 {
-            let prevPath = NSIndexPath(forRow: selectedRow, inSection: 0)
-            selectedRow = -1
-            tableView.reloadRowsAtIndexPaths([prevPath], withRowAnimation: .Automatic)
-        } else {
+        case -1:
+            indexPathesToBeReloaded.append(indexPath)
             selectedRow = indexPath.row
-            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        default:
+            indexPathesToBeReloaded.append(NSIndexPath(forRow: selectedRow, inSection: 0))
+            selectedRow = -1
         }
-
+        
+        tableView.reloadRowsAtIndexPaths(indexPathesToBeReloaded, withRowAnimation: .Automatic)
     }
     
     func showDescription(index: Int) {
-        
+        tableView.scrollEnabled = false
+
         blackView.backgroundColor = .blackColor()
         blackView.alpha = 0.0
+        blackView.addTarget(self, action: #selector(hideDescription), forControlEvents: .TouchUpInside)
+        
         view.addSubview(blackView)
-        tableView.scrollEnabled = false
         view.addSubview(underTextViewShadow)
         view.addSubview(textView)
-        blackView.addTarget(self, action: #selector(hideDescription), forControlEvents: .TouchUpInside)
-        textView.backgroundColor = .whiteColor()
+        
         textView.snp_makeConstraints { (make) in
             make.center.equalTo(view)
             make.width.height.equalTo(view.snp_width).inset(10)
         }
-        underTextViewShadow.snp_makeConstraints { (make) in
-            make.center.equalTo(view)
-            make.width.height.equalTo(view.snp_width).inset(10)
-        }
+        underTextViewShadow.snp_makeConstraints { $0.edges.equalTo(textView) }
         
+        textView.backgroundColor = .whiteColor()
         textView.font = UIFont(name: "RopaSansLight", size: 16)
         textView.text = perfomances[index].descr
         textView.scrollEnabled = true
@@ -166,20 +169,12 @@ class PerfTableViewController: UITableViewController {
 
         underTextViewShadow.transform = CGAffineTransformMakeTranslation(0, -1000)
         textView.transform = CGAffineTransformMakeTranslation(0, -1000)
+        
         UIView.animateWithDuration(0.7, animations: {
             self.blackView.alpha = 0.3
             self.textView.transform = CGAffineTransformMakeTranslation(0, 0)
             self.underTextViewShadow.transform = CGAffineTransformMakeTranslation(0, 0)
-        }) { (completed: Bool) in
-            //TODO:
-            //Add swipe-up gesture recognizer
-
-        }
-        
-        
-
-        
-        
+        })
     }
 
     func hideDescription() {
@@ -190,9 +185,9 @@ class PerfTableViewController: UITableViewController {
         }) { (completed: Bool) in
             self.blackView.removeFromSuperview()
             self.textView.removeFromSuperview()
-            self.textView.contentOffset = CGPointZero
             self.underTextViewShadow.removeFromSuperview()
             self.tableView.scrollEnabled = true
+           // self.textView.contentOffset = CGPointZero
         }
 
     }

@@ -44,7 +44,6 @@ class Fetcher {
             return perf.date!.compare(NSDate()) == .OrderedDescending
         }
         
-        
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(newPerfs, toFile: Perfomance.ArchiveURL.path!)
         NSNotificationCenter.defaultCenter().postNotificationName("updatedPerfomances", object: nil)
         if !isSuccessfulSave {
