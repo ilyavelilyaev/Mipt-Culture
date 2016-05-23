@@ -136,7 +136,8 @@ class PerfTableViewController: UITableViewController {
             selectedRow = indexPath.row
         default:
             indexPathesToBeReloaded.append(NSIndexPath(forRow: selectedRow, inSection: 0))
-            selectedRow = -1
+            selectedRow = indexPath.row
+            indexPathesToBeReloaded.append(indexPath)
         }
         
         tableView.reloadRowsAtIndexPaths(indexPathesToBeReloaded, withRowAnimation: .Automatic)
