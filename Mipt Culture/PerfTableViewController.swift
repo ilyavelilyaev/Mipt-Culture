@@ -15,7 +15,7 @@ class PerfTableViewController: UITableViewController {
     let blackView = UIControl(frame: UIScreen.mainScreen().bounds)
     let underTextViewShadow = TextViewShadow()
     let textView = UITextView()
-
+    
     var selectedRow = -1
     
     func loadPlaceholders() {
@@ -49,7 +49,7 @@ class PerfTableViewController: UITableViewController {
         
         //TODO: If zero perfomances or internet problems, show it.
     }
-
+    
     func loadPerfomances() -> [Perfomance]? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Perfomance.ArchiveURL.path!) as? [Perfomance]
     }
@@ -105,7 +105,7 @@ class PerfTableViewController: UITableViewController {
             
             cell.addSubview(cell.stackView)
             cell.stackView.snp_makeConstraints { (make) in
-                make.top.equalTo(placeholder.snp_bottom).offset(15)
+                make.top.equalTo(placeholder.snp_bottom).offset(10)
                 make.left.equalTo(placeholder.snp_left).offset(20)
             }
             
@@ -187,7 +187,6 @@ class PerfTableViewController: UITableViewController {
             self.textView.removeFromSuperview()
             self.underTextViewShadow.removeFromSuperview()
             self.tableView.scrollEnabled = true
-           // self.textView.contentOffset = CGPointZero
         }
 
     }

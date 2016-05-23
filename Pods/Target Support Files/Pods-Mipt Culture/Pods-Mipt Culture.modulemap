@@ -1,6 +1,0 @@
-framework module Pods_Mipt_Culture {
-  umbrella header "Pods-Mipt Culture-umbrella.h"
-
-  export *
-  module * { export * }
-}

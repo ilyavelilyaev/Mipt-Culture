@@ -1,0 +1,6 @@
+framework module Pods_KP {
+  umbrella header "Pods-KP-umbrella.h"
+
+  export *
+  module * { export * }
+}

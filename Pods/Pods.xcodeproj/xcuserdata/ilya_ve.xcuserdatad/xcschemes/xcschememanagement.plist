@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AVReachability-AVReachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AVReachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,17 +39,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Mipt Culture.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Mipt CultureTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Mipt CultureUITests.xcscheme</key>
+		<key>Pods-KP.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,11 +57,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>288620CB9E78E065135A26A870C26DF9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2C2B1953A91633859BF7AD238FF567A0</key>
 		<dict>
 			<key>primary</key>
@@ -73,6 +68,11 @@
 			<true/>
 		</dict>
 		<key>41638D9B170F774D9F650F63B192526A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7BA9FED825954207E72A6CA230BA1BA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7AD40B7A429F971A317189FF602A05A</key>
+		<key>BA4586B65F446A8D4E156343458BB7A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7F02184B1EB1D14722A4078E6B08560</key>
+		<key>C6F85B84D8C6A73BB9E6AB40401AA7D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EA6538BC1DF8684599DAB2CD8F9CDC5D</key>
+		<key>D1E2D7289FD214A21275036B109BCEF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

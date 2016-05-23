@@ -18,7 +18,7 @@ class PerfTableViewCell: UITableViewCell {
     let priceLabel = UILabel()
     let screenWidth = UIScreen.mainScreen().bounds.width
     let screenHeight = UIScreen.mainScreen().bounds.height
-    let verticalSpacingScaleFactor = CGFloat(0.03)
+    let verticalSpacingScaleFactor = CGFloat(0.025)
     let fontSizeScaleFactor = CGFloat(0.045)
     let secondFontSizeScaleFactor = CGFloat(0.04)
     let horizontalSpacingScaleFactor = CGFloat(0.027)

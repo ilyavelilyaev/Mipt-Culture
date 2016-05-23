@@ -1,4 +1,5 @@
 PODS:
+  - AVReachability (0.1.1)
   - Bolts/Tasks (1.7.0)
   - CalendarView (1.1.2):
     - SwiftMoment (~> 0.1)
@@ -9,12 +10,14 @@ PODS:
   - SwiftMoment (0.4)
 
 DEPENDENCIES:
+  - AVReachability
   - CalendarView
   - HanekeSwift
   - Parse
   - SnapKit
 
 SPEC CHECKSUMS:
+  AVReachability: 4ee27382ea0975f25784e71a716c75aa62ef1f72
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   CalendarView: 35d51b70586213604edec22a585d105273f6e191
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
@@ -22,6 +25,6 @@ SPEC CHECKSUMS:
   SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
   SwiftMoment: e751c44be03a183fa6c949426d9473d26a66ef29
 
-PODFILE CHECKSUM: 05bc3bcd25bbc570863de0ecac9f66ae1ce69362
+PODFILE CHECKSUM: bc4073cc4267353dea52e18a77426484279f2afa
 
 COCOAPODS: 1.0.0

@@ -3,20 +3,11 @@
 # Uncomment this line if you're using Swift
  use_frameworks!
 
+target 'KP'
 pod 'SnapKit'
 pod 'CalendarView'
 pod 'Parse'
 pod 'HanekeSwift'
+pod 'AVReachability'
 
-target 'Mipt Culture' do
-
-end
-
-target 'Mipt CultureTests' do
-
-end
-
-target 'Mipt CultureUITests' do
-
-end
 
