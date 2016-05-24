@@ -46,8 +46,6 @@ class PerfTableViewController: UITableViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(update), name: "updatedPerfomances", object: nil)
         
         loadPlaceholders()
-        
-        //TODO: If zero perfomances or internet problems, show it.
     }
     
     func loadPerfomances() -> [Perfomance]? {
@@ -192,8 +190,5 @@ class PerfTableViewController: UITableViewController {
             self.underTextViewShadow.removeFromSuperview()
             self.tableView.scrollEnabled = true
         }
-
     }
-    
-   
 }
