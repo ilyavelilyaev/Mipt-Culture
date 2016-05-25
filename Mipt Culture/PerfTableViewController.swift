@@ -99,8 +99,7 @@ class PerfTableViewController: UITableViewController {
         
         if selectedRow == indexPath.row {
             let price = perfomances[indexPath.row].price
-            cell.priceLabel.text = (price != 0) ?  "(цена: \(price) Р)" : "(бесплатно)"
-            
+            cell.enrollButton.setTitle("Записаться " + ((price != 0) ?  "(цена: \(price) Р)" : "(бесплатно)"), forState: .Normal)
             cell.addSubview(cell.stackView)
             cell.stackView.snp_makeConstraints { (make) in
                 make.top.equalTo(placeholder.snp_bottom).offset(10)

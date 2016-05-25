@@ -52,19 +52,12 @@ class PerfTableViewCell: UITableViewCell {
         let stickImage1 = UIImageView(image: UIImage(named: "stick"))
         let enrollStackView = UIStackView(arrangedSubviews: [stickImage1, enrollButton])
         enrollStackView.spacing = horizontalSpacingScaleFactor * screenWidth
-        enrollButton.setTitle("Записаться", forState: .Normal)
+        //enrollButton.setTitle("Записаться ", forState: .Normal)
         enrollButton.setTitleColor(.blackColor(), forState: .Normal)
         enrollButton.setTitleColor(.grayColor(), forState: .Highlighted)
         enrollButton.titleLabel!.font = UIFont(name: "RopaSans", size: fontSizeScaleFactor * screenHeight)
         enrollButton.addTarget(self, action: #selector(enroll), forControlEvents: .TouchUpInside)
         enrollStackView.axis = .Horizontal
-        priceLabel.font = UIFont(name: "RopaSans", size:fontSizeScaleFactor * screenHeight)
-        enrollStackView.addArrangedSubview(priceLabel)
-
-        priceLabel.snp_makeConstraints { (make) in
-            make.trailing.equalTo(enrollStackView.snp_trailing)
-        }
-        
         
         stackView.addArrangedSubview(enrollStackView)
         
