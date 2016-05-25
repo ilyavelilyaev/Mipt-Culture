@@ -189,6 +189,7 @@ class PerfTableViewController: UITableViewController {
             self.textView.removeFromSuperview()
             self.underTextViewShadow.removeFromSuperview()
             self.tableView.scrollEnabled = true
+            self.textView.contentOffset = CGPointZero //needed to scroll back to top of desctiption
         }
     }
 }
