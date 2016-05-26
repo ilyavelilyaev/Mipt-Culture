@@ -20,6 +20,15 @@ class Fetcher {
         }
         
         let query = PFQuery(className: "Perfomances")
+        query.whereKeyExists("date")
+        query.whereKeyExists("name")
+        query.whereKeyExists("theatre")
+        query.whereKeyExists("price")
+        query.whereKeyExists("regURL")
+        query.whereKeyExists("adminURL")
+        query.whereKeyExists("tablePicURL")
+        query.whereKeyExists("description")
+
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) in
             if let error = error {
                 print ("Error while quering! \(error.localizedDescription)")
