@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         UIView.animateWithDuration(1, animations: { 
-            self.backgroundImageView.alpha = 0.1
+            self.backgroundImageView.alpha = 0.07
         }) { (completed: Bool) in
             self.addChildViewController(self.vc)
             self.view.addSubview(self.vc.view)

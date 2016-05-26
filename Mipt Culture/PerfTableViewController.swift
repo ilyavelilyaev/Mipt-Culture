@@ -34,7 +34,7 @@ class PerfTableViewController: UITableViewController {
     override func loadView() {
         super.loadView()
         
-        view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.25) //Will be deleted or refactored
+        view.backgroundColor = .clearColor()
         
         updateData()
         
