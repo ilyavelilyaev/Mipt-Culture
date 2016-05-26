@@ -48,11 +48,9 @@ class PerfTableViewCell: UITableViewCell {
         
         stackView.addArrangedSubview(moreStackView)
 
-        //TODO: Delete price label and add price to button titile
         let stickImage1 = UIImageView(image: UIImage(named: "stick"))
         let enrollStackView = UIStackView(arrangedSubviews: [stickImage1, enrollButton])
         enrollStackView.spacing = horizontalSpacingScaleFactor * screenWidth
-        //enrollButton.setTitle("Записаться ", forState: .Normal)
         enrollButton.setTitleColor(.blackColor(), forState: .Normal)
         enrollButton.setTitleColor(.grayColor(), forState: .Highlighted)
         enrollButton.titleLabel!.font = UIFont(name: "RopaSans", size: fontSizeScaleFactor * screenHeight)
